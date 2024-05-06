@@ -10,7 +10,7 @@ import {privateDecrypt} from "node:crypto";
 })
 export class UsuariosService {
 
-  url = 'https://localhost:32774/api/Usuarios';
+  url = 'http://localhost:8081/api/Usuarios';
 
 
   constructor(private httpClient: HttpClient) { }
