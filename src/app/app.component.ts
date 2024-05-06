@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {NgForm} from '@angular/forms';
+import {FormsModule, NgForm} from '@angular/forms';
 import {Usuario} from "./model/usuario";
 import {UsuariosService} from "./services/usuarios.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
   title = 'angularchallenge';
   usuario = {} as Usuario;
   usuarios: Usuario[] = [];
+
 
   constructor(private usuarioService: UsuariosService) {}
 
