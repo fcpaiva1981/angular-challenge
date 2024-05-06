@@ -17,6 +17,34 @@
       <li class="breadcrumb-item active" aria-current="page">Gerenciamento de carros</li>
     </ol>
   </nav>
+  <div class="container">
+    <div class="card list-car">
+      <h5 class="card-header">Lista de usuários</h5>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let usuarios of usuarios">
+            <td>{{usuarios.id}}</td>
+            <td>{{usuarios.nome}}</td>
+            <td>{{usuarios.email}}</td>
+
+            <td>
+              <button type="button" class="btn btn-warning btn-sm" (click)="editUsuario(usuarios)">Editar</button>
+              <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteUsuario(usuarios)">Deletar</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 </app-root>
 </body>
 
